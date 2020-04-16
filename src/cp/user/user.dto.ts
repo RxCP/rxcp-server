@@ -5,7 +5,7 @@ import {
   IsNotEmpty,
   ValidateIf,
 } from 'class-validator';
-import { ApiProperty, PartialType } from '@nestjs/swagger';
+import { ApiProperty, PartialType, PickType } from '@nestjs/swagger';
 import { Match } from '../../common/decorators/match.decorator';
 
 export class CreateUserDto {
@@ -45,10 +45,10 @@ export class CreateUserDto {
     message: 'First name should not be empty',
   })
   @MinLength(1, {
-    message: 'First name must be longer than or equal to 1 characters'
+    message: 'First name must be longer than or equal to 1 characters',
   })
   @MaxLength(31, {
-    message: 'First name must be shorter than or equal to 31 characters'
+    message: 'First name must be shorter than or equal to 31 characters',
   })
   @ApiProperty()
   firstName: string;
@@ -57,7 +57,7 @@ export class CreateUserDto {
     message: 'Last name should not be empty',
   })
   @MinLength(1, {
-    message: 'Last name must be longer than or equal to 1 characters'
+    message: 'Last name must be longer than or equal to 1 characters',
   })
   @MaxLength(31, {
     message: 'Last name must be shorter than or equal to 31 characters',
@@ -67,3 +67,7 @@ export class CreateUserDto {
 }
 
 export class UpdateUserDto extends PartialType(CreateUserDto) {}
+
+export class LoginUserDto extends PartialType(
+  PickType(CreateUserDto, ['email', 'password']),
+) {}

@@ -33,6 +33,6 @@ export class UserService {
       });
     }
 
-    return this.userRepository.save(createUserDto)
+    return this.userRepository.save(createUserDto);
   }
 }

@@ -1,6 +1,9 @@
 import { Strategy } from 'passport-local';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
+import { validateOrReject } from 'class-validator';
+
+import { LoginUserDto } from '../cp/user/user.dto';
 import { AuthService } from './auth.service';
 
 @Injectable()
@@ -12,21 +15,18 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
   }
 
   async validate(email: string, password: string): Promise<any> {
-    if (!email || !password) {
+    const loginUser = new LoginUserDto();
+    loginUser.email = email;
+    loginUser.password = password;
+
+    try {
+      await validateOrReject(loginUser);
+      return await this.authService.validateUser(email, password);
+    } catch (errors) {
       throw new HttpException(
-        'Inorrect email or password',
+        'Inorrect email address or password',
         HttpStatus.UNPROCESSABLE_ENTITY,
       );
     }
-
-    const user = await this.authService.validateUser(email, password);
-
-    if (!user) {
-      throw new HttpException(
-        'Inorrect email or password',
-        HttpStatus.UNPROCESSABLE_ENTITY,
-      );
-    }
-    return user;
   }
 }

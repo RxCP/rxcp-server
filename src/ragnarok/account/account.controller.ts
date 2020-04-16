@@ -58,11 +58,9 @@ export class AccountController {
   @ApiBadRequestResponse({ description: 'Validation failed' })
   @ApiConflictResponse({ description: 'Conflict' })
   async createOne(@Body() createAccountDto: CreateAccountDto): Promise<Login> {
-    return this.accountService
-      .createOne(createAccountDto)
-      .catch((err) => {
-        throw new HttpException(err.message, HttpStatus.CONFLICT);
-      });
+    return this.accountService.createOne(createAccountDto).catch((err) => {
+      throw new HttpException(err.message, HttpStatus.CONFLICT);
+    });
   }
 
   @UseGuards(JwtAuthGuard)
@@ -75,11 +73,9 @@ export class AccountController {
     @Param('id') id: string,
     @Body() updateAccountDto: UpdateAccountDto,
   ): Promise<Login> {
-    return this.accountService
-      .updateOne(id, updateAccountDto)
-      .catch((err) => {
-        throw new HttpException(err.message, HttpStatus.BAD_REQUEST);
-      });
+    return this.accountService.updateOne(id, updateAccountDto).catch((err) => {
+      throw new HttpException(err.message, HttpStatus.BAD_REQUEST);
+    });
   }
 
   @UseGuards(JwtAuthGuard)
