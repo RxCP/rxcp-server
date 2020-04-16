@@ -33,6 +33,7 @@ export class UserService {
       });
     }
 
-    return this.userRepository.save(createUserDto);
+    const entity = Object.assign(new User(), createUserDto);
+    return this.userRepository.save(entity);
   }
 }
