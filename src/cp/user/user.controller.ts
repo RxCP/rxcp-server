@@ -1,9 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
-import { UsersService } from './user.service';
+import { ApiTags } from '@nestjs/swagger';
+
+import { UserService } from './user.service';
 
 @Controller('users')
+@ApiTags('users')
 export class UsersController {
-  constructor(private userService: UsersService) {}
+  constructor(private userService: UserService) {}
 
   @Get()
   find() {
