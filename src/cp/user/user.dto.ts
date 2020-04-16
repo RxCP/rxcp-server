@@ -23,10 +23,10 @@ export class CreateUserDto {
     message: 'Password should not be empty',
   })
   @MinLength(8, {
-    message: 'Password must not be less than 8',
+    message: 'Password must be longer than or equal to 8 characters',
   })
   @MaxLength(31, {
-    message: 'Password must not be greater than 31',
+    message: 'Password must be shorter than or equal to 31 characters',
   })
   @ApiProperty()
   password: string;
