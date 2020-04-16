@@ -38,6 +38,7 @@ export class CreateUserDto {
   @Match('password', {
     message: 'Password and confirm password does not match',
   })
+  @ApiProperty()
   confirmPassword: string;
 
   @IsNotEmpty({
