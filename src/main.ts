@@ -6,6 +6,9 @@ import {
 } from '@nestjs/platform-fastify';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { ConfigService } from '@nestjs/config';
+import * as helmet from 'helmet';
+import * as fastifyRateLimit from 'fastify-rate-limit';
+
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -25,6 +28,13 @@ async function bootstrap() {
     'application.swagger.description',
   );
 
+  app.use(helmet());
+  app.enableCors();
+  // app.use(csurf());
+  app.register(fastifyRateLimit, {
+    max: 100,
+    timeWindow: '1 minute',
+  });
   app.setGlobalPrefix(apiRoutePrefix);
   app.useGlobalPipes(new ValidationPipe());
 
