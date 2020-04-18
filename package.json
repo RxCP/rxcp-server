@@ -52,7 +52,7 @@
     "rimraf": "3.0.2",
     "rxjs": "6.5.5",
     "typeorm": "0.2.24",
-    "typeorm-seeding": "1.6.0"
+    "typeorm-seeding": "1.6.1"
   },
   "devDependencies": {
     "@nestjs/cli": "7.1.2",
