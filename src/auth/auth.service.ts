@@ -11,7 +11,7 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  async validateUser(email: string, pass: string): Promise<any> {
+  async validateUser(email: string, pass: string): Promise<object> {
     const user = await this.usersService.findByEmail(email);
 
     if (user && (await bcrypt.compare(pass, user.password))) {
@@ -19,7 +19,7 @@ export class AuthService {
       return result;
     }
 
-    return null;
+    return Promise.reject({ message: 'User not found' });
   }
 
   async login(user: any) {
