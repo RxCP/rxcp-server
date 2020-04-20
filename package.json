@@ -36,7 +36,7 @@
     "@nestjs/jwt": "7.0.0",
     "@nestjs/passport": "7.0.0",
     "@nestjs/platform-fastify": "7.0.8",
-    "@nestjs/swagger": "4.5.2",
+    "@nestjs/swagger": "4.5.3",
     "@nestjs/typeorm": "7.0.0",
     "@types/bcryptjs": "2.4.2",
     "bcryptjs": "2.4.3",
