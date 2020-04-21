@@ -1,5 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Res } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
+import { Response } from "express";
 
 import { UserService } from './user.service';
 
@@ -9,7 +10,10 @@ export class UsersController {
   constructor(private userService: UserService) {}
 
   @Get()
-  find() {
-    return this.userService.findAll();
+  async find(@Res() res: Response) {
+    const users = await this.userService.findAll();
+    res.header('Access-Control-Expose-Headers', 'X-Total-Count');
+    res.header('X-Total-Count', users.length.toString())
+    res.send(users);
   }
 }
