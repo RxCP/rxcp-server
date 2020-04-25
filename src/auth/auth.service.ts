@@ -3,6 +3,8 @@ import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcryptjs';
 
 import { UserService } from '../cp/user/user.service';
+import { LoginUserDto } from '../cp/user/user.dto';
+import { User } from '../cp/user/user.entity'
 
 @Injectable()
 export class AuthService {
@@ -22,8 +24,8 @@ export class AuthService {
     return Promise.reject({ message: 'User not found' });
   }
 
-  async login(user: any) {
-    const payload = { email: user.email, sub: user.userId };
+  async login(userId: number) {
+    const payload = { sub: userId };
     return {
       accessToken: this.jwtService.sign(payload),
     };

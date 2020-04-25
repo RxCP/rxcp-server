@@ -1,19 +1,21 @@
-import { Controller, Get, Res } from '@nestjs/common';
+import { Controller, Get, Query, UseInterceptors } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { Response } from "express";
 
+import { User } from './user.entity'
 import { UserService } from './user.service';
+import { PaginationTransformer } from '../../common/interceptors/pagination.interceptors'
+import {
+  PaginationResponseInterface as PaginationResponse
+} from '../../common/interfaces/pagination.interface';
 
 @Controller('users')
 @ApiTags('users')
 export class UsersController {
   constructor(private userService: UserService) {}
 
+  @UseInterceptors(PaginationTransformer)
   @Get()
-  async find(@Res() res: Response) {
-    const users = await this.userService.findAll();
-    res.header('Access-Control-Expose-Headers', 'X-Total-Count');
-    res.header('X-Total-Count', users.length.toString())
-    res.send(users);
+  async find(@Query() query): Promise<PaginationResponse<User>> {
+    return await this.userService.findAll(query)
   }
 }
