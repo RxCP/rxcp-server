@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UsersService } from './user.service';
+import { UserService } from './user.service';
 import { User } from './user.entity';
 import { testDatabase } from '../../../test/test-db';
 
 describe('UsersService', () => {
   let module: TestingModule;
-  let service: UsersService;
+  let service: UserService;
 
   beforeEach(async () => {
     module = await Test.createTestingModule({
@@ -14,10 +14,10 @@ describe('UsersService', () => {
         testDatabase([User], 'cp'),
         TypeOrmModule.forFeature([User], 'cp'),
       ],
-      providers: [UsersService],
+      providers: [UserService],
     }).compile();
 
-    service = module.get<UsersService>(UsersService);
+    service = module.get<UserService>(UserService);
   });
 
   afterAll(async () => {
