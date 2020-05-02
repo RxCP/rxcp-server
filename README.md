@@ -1,37 +1,21 @@
-# RxCP Server
+<h1 align="center">RxCP</h1>
+<h2 align="center">rAthena server-side API and admin dashboard.</h2>
+<p align="center">The most advanced open-source Control Panel for rAthena servers.</p>
 
-[![CodeFactor](https://www.codefactor.io/repository/github/rxcp/rxcp-server/badge/develop)](https://www.codefactor.io/repository/github/rxcp/rxcp-server/overview/develop)
+## Folder Structure
 
-The API for RxCP, a control panel for rAthena servers
+    .
+    ├── api             # API source files
+    ├── admin           # Admin dashboard source files
+    ├── LICENSE.md
+    └── README.md
 
 ## Installation
+...
 
-```bash
-$ npm install
-```
+## Deployment
+...
 
-## Running the app
+## License
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+RxCP is [MIT licensed](LICENSE.md).
