@@ -16,6 +16,6 @@ export class UsersController {
   @UseInterceptors(PaginationTransformer)
   @Get()
   async find(@Query() query): Promise<PaginationResponse<User>> {
-    return await this.userService.findAll(query)
+    return this.userService.findAll(query)
   }
 }
