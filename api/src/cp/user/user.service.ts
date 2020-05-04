@@ -4,6 +4,10 @@ import { Repository } from 'typeorm';
 
 import { User } from './user.entity';
 import { CreateUserDto } from './user.dto';
+import {
+  PaginationResponseInterface as PaginationResponse,
+  ReactAdminPaginationRequestInterface as PaginationRequest,
+} from '../../common/interfaces/pagination.interface';
 
 @Injectable()
 export class UserService {
@@ -12,8 +16,23 @@ export class UserService {
     private userRepository: Repository<User>,
   ) {}
 
-  findAll() {
-    return this.userRepository.find();
+  async findAll(query: PaginationRequest): Promise<PaginationResponse<User>> {
+    const take = query._end || 10; // limit
+    const skip = query._start || 0; // offset
+    const page = Math.floor(query._start / query._end);
+
+
+    const [result, total] = await this.userRepository.findAndCount({
+      take,
+      skip,
+    });
+
+    return {
+      totalCount: total,
+      page,
+      perPage: take,
+      results: result,
+    };
   }
 
   findByEmail(email: string): Promise<User> {

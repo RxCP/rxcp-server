@@ -26,7 +26,8 @@ export class AuthController {
   @UseGuards(LocalAuthGuard)
   @Post('login')
   async login(@Body() loginUserDto: LoginUserDto): Promise<object> {
-    return this.authService.login(loginUserDto);
+    const { id } = await this.userService.findByEmail(loginUserDto.email)
+    return this.authService.login(id);
   }
 
   @Post('register')

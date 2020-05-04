@@ -24,7 +24,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
       return await this.authService.validateUser(email, password);
     } catch (errors) {
       throw new HttpException(
-        'Inorrect email address or password',
+        'Incorrect email address or password',
         HttpStatus.UNPROCESSABLE_ENTITY,
       );
     }
