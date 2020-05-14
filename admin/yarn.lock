@@ -1506,10 +1506,10 @@
     "@babel/runtime" "^7.5.5"
     "@testing-library/dom" "^5.6.1"
 
-"@testing-library/user-event@10.1.2":
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-10.1.2.tgz#cdf064856af9ead0ce121eff1ddf3e0e1cad9516"
-  integrity sha512-77pydoNNMfcCgE6RasuYB+Dm61mWtzO1l4JBWHbFyUXXf9FA+9XrpLWWB/vA/FfTsjj4vrV7kHNorj3UKLtcig==
+"@testing-library/user-event@10.2.4":
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-10.2.4.tgz#7a6969ae2904aaae85d80c0ff1c05862e6f71390"
+  integrity sha512-4Wr1C5Lp6RPva9EBsDfNFw6GDGYUPx/zu+8cgOZG4UqBEIiB6dlhFsDRowTxZr0iY2NlEiBVt2+t8xPaJx3SYw==
 
 "@types/babel__core@^7.1.0":
   version "7.1.6"
@@ -8953,22 +8953,6 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
   integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
 
-ra-core@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.5.0.tgz#fab75b8f105f6f620538bc554754296e9aba5ab2"
-  integrity sha512-Utf/1kZaitnZWNG+4UGD2DSqWsIUWt5GATysIAmU+PdPCivmyyaSpn2XvWpTwoks/56yBYs7rhZkmK70vhvHgw==
-  dependencies:
-    "@testing-library/react" "^8.0.7"
-    classnames "~2.2.5"
-    date-fns "^1.29.0"
-    eventemitter3 "^3.0.0"
-    inflection "~1.12.0"
-    lodash "~4.17.5"
-    prop-types "^15.6.1"
-    query-string "^5.1.1"
-    recompose "~0.26.0"
-    reselect "~3.0.0"
-
 ra-core@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.5.1.tgz#7013ab28627e5cf2738e79981f8e3e52821ec9b9"
@@ -8985,12 +8969,10 @@ ra-core@^3.5.1:
     recompose "~0.26.0"
     reselect "~3.0.0"
 
-
 ra-data-json-server@3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.5.1.tgz#8db45f33f7f8ae56f30ec173746b3868888178cf"
   integrity sha512-0gEeSsqeY/SYrv5uTsGLlihVbfpUwBOpdA/VADPOFFYP2zSbCGN9eMXDNGOtO06iCmimOLCF8yYtclmMjBUxwQ==
-
   dependencies:
     query-string "^5.1.1"
     ra-core "^3.5.1"
