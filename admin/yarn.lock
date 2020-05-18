@@ -1506,10 +1506,10 @@
     "@babel/runtime" "^7.5.5"
     "@testing-library/dom" "^5.6.1"
 
-"@testing-library/user-event@10.3.0":
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-10.3.0.tgz#37f8421a90c9dc604541b6bb4271dc9e930825b5"
-  integrity sha512-v7wceaRwwWlAnl5jP5SB1jzlC2z/7ASwUVXUo3hIksAn1Ml4xV8QTHkp1pfUux+fe7xIMQBwyhGIN5Bv2sqGqg==
+"@testing-library/user-event@10.3.1":
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-10.3.1.tgz#8ed6fbfa40fbb866fa4666c9a62d7f7ff151f93b"
+  integrity sha512-HozvWlr/xHmkoJrrDdZBbUOXAC/STAeXGyNU+g5KgEwWBpLJi1RPCHJKbTjwz8hp2jDFsk/jjfD0530eZjcFEg==
 
 "@types/babel__core@^7.1.0":
   version "7.1.6"
@@ -8953,22 +8953,6 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
   integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
 
-ra-core@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.5.1.tgz#7013ab28627e5cf2738e79981f8e3e52821ec9b9"
-  integrity sha512-+q/76AkUDf+/X+bkn5YEpAAPLYXwo4FkAgdEgeEEiaAZpVU+h0CB/aOJgh25IlwBwODatFiLUyyZNKHptdu/gA==
-  dependencies:
-    "@testing-library/react" "^8.0.7"
-    classnames "~2.2.5"
-    date-fns "^1.29.0"
-    eventemitter3 "^3.0.0"
-    inflection "~1.12.0"
-    lodash "~4.17.5"
-    prop-types "^15.6.1"
-    query-string "^5.1.1"
-    recompose "~0.26.0"
-    reselect "~3.0.0"
-
 ra-core@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.5.2.tgz#deb21ff11b5302fabe0255cde6d7e080b46c98b1"
@@ -8984,6 +8968,7 @@ ra-core@^3.5.2:
     query-string "^5.1.1"
     recompose "~0.26.0"
     reselect "~3.0.0"
+
 ra-data-json-server@3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.5.2.tgz#ff16b4826c08f033deb37a8a2ab09d7f4f586989"
