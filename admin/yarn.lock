@@ -1506,10 +1506,12 @@
     "@babel/runtime" "^7.5.5"
     "@testing-library/dom" "^5.6.1"
 
-"@testing-library/user-event@10.3.1":
-  version "10.3.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-10.3.1.tgz#8ed6fbfa40fbb866fa4666c9a62d7f7ff151f93b"
-  integrity sha512-HozvWlr/xHmkoJrrDdZBbUOXAC/STAeXGyNU+g5KgEwWBpLJi1RPCHJKbTjwz8hp2jDFsk/jjfD0530eZjcFEg==
+"@testing-library/user-event@10.3.5":
+  version "10.3.5"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-10.3.5.tgz#4a47cdc0b2f41255a7140afbe4933b0e9483cf86"
+  integrity sha512-9Jg5pg12099EoOb4Z/+UNtCFpFIblD6INkgeWuV/AjUiYP+s/u6aYGPaLrUYioJ8duQ3V421B29GVE/3JELjCQ==
+  dependencies:
+    "@babel/runtime" "^7.9.6"
 
 "@types/babel__core@^7.1.0":
   version "7.1.6"
@@ -8984,14 +8986,13 @@ ra-core@^3.5.3:
     query-string "^5.1.1"
     recompose "~0.26.0"
     reselect "~3.0.0"
-
-ra-data-json-server@3.5.2:
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.5.2.tgz#ff16b4826c08f033deb37a8a2ab09d7f4f586989"
-  integrity sha512-UK8vsXL+pwyGlcAkH47BI+e0otsbGm6IXf1ZIFOlJUhw3uz06pljphInZEWw4si9cDa50vtk5zxbcLs5rRogmg==
+ra-data-json-server@3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.5.3.tgz#afa5c30bc15b3c91649a67b6191a4f9bd6ed2d5b"
+  integrity sha512-ldMpFr19XJeh8wetTbSk/CZAi4lprb757IIYXmp9bSlB5yQE24G/HjUzhHiWo5LteBycIshd50lC59RvCH1TLQ==
   dependencies:
     query-string "^5.1.1"
-    ra-core "^3.5.2"
+    ra-core "^3.5.3"
 
 ra-i18n-polyglot@^3.5.3:
   version "3.5.3"
