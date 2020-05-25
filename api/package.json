@@ -46,7 +46,7 @@
     "csurf": "1.11.0",
     "fastify": "2.14.1",
     "fastify-rate-limit": "3.0.1",
-    "fastify-swagger": "2.5.1",
+    "fastify-swagger": "2.6.0",
     "helmet": "3.22.0",
     "mysql": "2.18.1",
     "passport": "0.4.1",
