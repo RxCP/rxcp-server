@@ -627,12 +627,12 @@
     optional "0.1.4"
     tslib "2.0.0"
 
-"@nestjs/typeorm@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/typeorm/-/typeorm-7.0.0.tgz#0993a949bba81756317e8e865882184bd7f16133"
-  integrity sha512-oIiQRihMVNQPE6PzEaB7UDfGlktCtkHNxI2HeSf/Uyrjl7DspPSHNLg9IVVSztk+L9kJquYMXhzApr2PxoK3EQ==
+"@nestjs/typeorm@7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/typeorm/-/typeorm-7.0.1.tgz#9c26a890a3f79d44139b3bb871f30ae3883be9a1"
+  integrity sha512-nMg3UBTFAU00o9ib5e0KHaan16qGmo71TIcbwniNX019l8ReAhNbUG+RpPTde28k59q1tn0ex31loR3J034p8A==
   dependencies:
-    uuid "7.0.2"
+    uuid "8.1.0"
 
 "@nuxtjs/opencollective@0.2.2":
   version "0.2.2"
@@ -7372,11 +7372,6 @@ util@^0.11.0:
   integrity sha512-HShAsny+zS2TZfaXxD9tYj4HQGlBezXZMZuM/S5PKLLoZkShZiGk9o5CzukI1LVHZvjdvZ2Sj1aW/Ndn2NB/HQ==
   dependencies:
     inherits "2.0.3"
-
-uuid@7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.2.tgz#7ff5c203467e91f5e0d85cfcbaaf7d2ebbca9be6"
-  integrity sha512-vy9V/+pKG+5ZTYKf+VcphF5Oc6EFiu3W8Nv3P3zIh0EqVI80ZxOzuPfe9EHjkFNvf8+xuTHVeei4Drydlx4zjw==
 
 uuid@8.0.0:
   version "8.0.0"
