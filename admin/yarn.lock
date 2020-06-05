@@ -9003,10 +9003,10 @@ ra-language-english@^3.5.5:
   dependencies:
     ra-core "^3.5.5"
 
-ra-ui-materialui@^3.5.5:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-3.5.5.tgz#b0c6b02181ab25912fbe53cbc4a5507917b3b5e7"
-  integrity sha512-lk2AgYEogl+MZVOnQwfg56t1s1bTuMac8MsmcGln+jNI+XwQy2Z2ANQ+94bf9ipga39lJwXdaGCn/g2AQebNSQ==
+ra-ui-materialui@^3.5.6:
+  version "3.5.6"
+  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-3.5.6.tgz#69f37735013749d05014e96e974a5961562a5dda"
+  integrity sha512-PA/xXMxwDHXS2eVZracwZplf8dQ3vPlGiZEGgcq0rPJ4Tx6OntHPcXRbj/48/i3jpq0NTXy+KjGn/OvOIa/aVA==
   dependencies:
     autosuggest-highlight "^3.1.1"
     classnames "~2.2.5"
@@ -9059,10 +9059,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-admin@3.5.5:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-3.5.5.tgz#f3ebb2bf8d8262e87b6a3ef31e78b42f5c26464c"
-  integrity sha512-Xqz3u3cmM6xOAK3EUMssNU6bgm6TCJD4bu+tkoIw3H8Gk+vJQ0hcAsyL4SKXV1tqelMSicMN4fzLJNJhTeE8Tw==
+react-admin@3.5.6:
+  version "3.5.6"
+  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-3.5.6.tgz#ca059a8828887d3d3512fd5b5db106caca5ff6c4"
+  integrity sha512-ZRUR42ZoR8VCws9+k5IihmEKWemNO2NzOSfWmvgy872W2Zj9B/TNwSP+RDubA/3fe2gdubSAukWoPed4PSQKBQ==
   dependencies:
     "@material-ui/core" "^4.3.3"
     "@material-ui/icons" "^4.2.1"
@@ -9073,7 +9073,7 @@ react-admin@3.5.5:
     ra-core "^3.5.5"
     ra-i18n-polyglot "^3.5.5"
     ra-language-english "^3.5.5"
-    ra-ui-materialui "^3.5.5"
+    ra-ui-materialui "^3.5.6"
     react-final-form "^6.3.3"
     react-final-form-arrays "^3.1.1"
     react-redux "^7.1.0"
