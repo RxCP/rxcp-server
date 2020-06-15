@@ -8961,13 +8961,13 @@ ra-core@^3.6.1:
     recompose "~0.26.0"
     reselect "~3.0.0"
 
-ra-data-json-server@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.6.0.tgz#f3900a299ad53664d34bfa44a777cd9b6269c0f6"
-  integrity sha512-ZhS7EkHmW9EhY2AXyUuFAsJw7NGPRXTXPN87Q5Y6NdtVa23NshUrkaFJ7Kys+OWsL+Y5w4GRM4QguaUV66Yo9Q==
+ra-data-json-server@3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.6.1.tgz#10b0696dbd4e5fe453e42a31d9ab3f8ecf63030a"
+  integrity sha512-d+weR7CU49iRTYip2+81rPzd/x0hfuT10DIw339FtbY+85QyUF1WqgZ032B1ST0DhlssxJmb6fBnnppZIGm1Wg==
   dependencies:
     query-string "^5.1.1"
-    ra-core "^3.6.0"
+    ra-core "^3.6.1"
 
 ra-i18n-polyglot@^3.6.1:
   version "3.6.1"
