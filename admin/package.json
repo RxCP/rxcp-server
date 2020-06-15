@@ -10,7 +10,7 @@
     "@testing-library/user-event": "11.4.2",
     "prettier": "2.0.5",
     "prop-types": "15.7.2",
-    "ra-data-json-server": "3.6.0",
+    "ra-data-json-server": "3.6.1",
     "react": "16.13.1",
     "react-admin": "3.6.0",
     "react-dom": "16.13.1",
