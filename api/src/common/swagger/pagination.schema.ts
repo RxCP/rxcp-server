@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { Type } from '@nestjs/common';
 import { PaginationResponseInterface } from '../interfaces/pagination.interface';
 
 export class PaginationResponse<Entity>
@@ -16,10 +17,8 @@ export class PaginationResponse<Entity>
   totalCount: number;
 }
 
-type Entity = Function;
-
 export function getPaginationForEntity(
-  type: Entity,
+  type: Type<unknown> | string | Record<string, any>,
 ): typeof PaginationResponse {
   class PaginationResponseForEntity<Entity> extends PaginationResponse<Entity> {
     @ApiProperty({ type, isArray: true })

@@ -10,7 +10,7 @@ export interface PaginationRequestInterface {
   page?: number;
 }
 
-export type OrderTypes = 'ASC'|'DESC';
+export type OrderTypes = 'ASC' | 'DESC';
 
 export interface ReactAdminPaginationRequestInterface {
   _end?: number;

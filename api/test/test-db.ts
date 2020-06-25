@@ -1,10 +1,11 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { DynamicModule } from '@nestjs/common';
 import { EntitySchema } from '../node_modules/typeorm/entity-schema/EntitySchema';
 
 export const testDatabase = (
-  entities?: (Function | string | EntitySchema)[],
+  entities?: (() => void | string | EntitySchema)[],
   connection?: string,
-) => {
+): DynamicModule => {
   return TypeOrmModule.forRoot({
     name: connection || 'default',
     type: 'mysql',

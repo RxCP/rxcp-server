@@ -13,6 +13,8 @@ import { LocalAuthGuard } from './local-auth.guard';
 import { AuthService } from './auth.service';
 import { UserService } from '../cp/user/user.service';
 import { CreateUserDto, LoginUserDto } from '../cp/user/user.dto';
+import { AuthTokenResponseInterface } from '../common/interfaces/authToken.interface';
+import { MessageResponseInterface } from '../common/interfaces/messageResponse.interface';
 
 @UseInterceptors(ClassSerializerInterceptor)
 @Controller('auth')
@@ -25,13 +27,17 @@ export class AuthController {
 
   @UseGuards(LocalAuthGuard)
   @Post('login')
-  async login(@Body() loginUserDto: LoginUserDto): Promise<object> {
-    const { id } = await this.userService.findByEmail(loginUserDto.email)
+  async login(
+    @Body() loginUserDto: LoginUserDto,
+  ): Promise<AuthTokenResponseInterface> {
+    const { id } = await this.userService.findByEmail(loginUserDto.email);
     return this.authService.login(id);
   }
 
   @Post('register')
-  async register(@Body() createUserDto: CreateUserDto): Promise<object> {
+  async register(
+    @Body() createUserDto: CreateUserDto,
+  ): Promise<MessageResponseInterface> {
     await this.userService.create(createUserDto).catch((err) => {
       throw new HttpException(err.message, HttpStatus.CONFLICT);
     });

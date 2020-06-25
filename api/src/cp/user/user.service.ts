@@ -21,7 +21,6 @@ export class UserService {
     const skip = query._start || 0; // offset
     const page = Math.floor(query._start / query._end);
 
-
     const [result, total] = await this.userRepository.findAndCount({
       take,
       skip,

@@ -4,7 +4,6 @@ import { AccountService } from './account.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Login } from './account.login.entity';
 import { testDatabase } from '../../../test/test-db';
-import { CreateAccountDto, UpdateAccountDto } from './account.dto';
 import {
   PaginationResponseInterface as PaginationResponse,
   PaginationRequestInterface as PaginationRequest,

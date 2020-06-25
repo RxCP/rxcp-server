@@ -21,7 +21,11 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
 
     try {
       await validateOrReject(loginUser);
-      return await this.authService.validateUser(email, password);
+      const { ...result } = await this.authService.validateUser(
+        email,
+        password,
+      );
+      return result;
     } catch (errors) {
       throw new HttpException(
         'Incorrect email address or password',

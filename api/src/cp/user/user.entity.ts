@@ -36,7 +36,7 @@ export class User {
   updatedAt: Date;
 
   @BeforeInsert()
-  async setPassword(password: string) {
+  async setPassword(password: string): Promise<void> {
     this.password = await hashPassword(password || this.password);
   }
 }

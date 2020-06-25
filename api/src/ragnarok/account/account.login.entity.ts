@@ -1,10 +1,4 @@
-import {
-  Column,
-  Entity,
-  Index,
-  BeforeInsert,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
 import { Exclude } from 'class-transformer';
 import { ApiProperty } from '@nestjs/swagger';
 
@@ -104,11 +98,6 @@ export class Login {
   @ApiProperty()
   @Column('tinyint', { name: 'old_group', default: () => "'0'" })
   oldGroup: number;
-
-  @BeforeInsert()
-  async setUserPass() {
-    // encrypt password here
-  }
 
   constructor(partial: Partial<Login>) {
     Object.assign(this, partial);
