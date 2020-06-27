@@ -3,7 +3,7 @@ import { DynamicModule } from '@nestjs/common';
 import { EntitySchema } from '../node_modules/typeorm/entity-schema/EntitySchema';
 
 export const testDatabase = (
-  entities?: (() => void | string | EntitySchema)[],
+  entities?: (any | EntitySchema)[],
   connection?: string,
 ): DynamicModule => {
   return TypeOrmModule.forRoot({
