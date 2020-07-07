@@ -12,7 +12,7 @@
     "prop-types": "15.7.2",
     "ra-data-json-server": "3.7.0",
     "react": "16.13.1",
-    "react-admin": "3.6.2",
+    "react-admin": "3.7.0",
     "react-dom": "16.13.1",
     "react-scripts": "3.4.1"
   },
