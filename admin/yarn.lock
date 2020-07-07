@@ -9111,13 +9111,29 @@ ra-core@^3.6.2:
     recompose "~0.26.0"
     reselect "~3.0.0"
 
-ra-data-json-server@3.6.2:
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.6.2.tgz#3d8a193d3ed71824823e11a323539a480c8404dd"
-  integrity sha512-Gw3mf0dtZXkI1XOvwCsH+UO849utjyPPdsBtQBUhRixlAI5qEIHP/Gp3a6wn8UFWZgoNGbk4hfNMZ1Nnv+JOEg==
+ra-core@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.7.0.tgz#b18116c2d1f1d0d9d96b0ffa485d498825c1cfd2"
+  integrity sha512-0kDszbrZjh7eGwZPyu7S0PrJNEJM+yaHVHcP/iGz9DcYLgAmDo5O2QCOMQxpikN9QDyKUa+CkoIWRM6TS/Hazw==
+  dependencies:
+    "@testing-library/react" "^8.0.7"
+    classnames "~2.2.5"
+    date-fns "^1.29.0"
+    eventemitter3 "^3.0.0"
+    inflection "~1.12.0"
+    lodash "~4.17.5"
+    prop-types "^15.6.1"
+    query-string "^5.1.1"
+    recompose "~0.26.0"
+    reselect "~3.0.0"
+
+ra-data-json-server@3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.7.0.tgz#375ad5b1578ec99b6f087fe72907b96abd738841"
+  integrity sha512-jb3rGHfvl5v+aX1ciArzJxpBEzOZ2VMkwjy3g2RBEd2a2p5w6prLsThpJJXJqfDfUxl+hldaB97j6Z4HJXZnMA==
   dependencies:
     query-string "^5.1.1"
-    ra-core "^3.6.2"
+    ra-core "^3.7.0"
 
 ra-i18n-polyglot@^3.6.2:
   version "3.6.2"
